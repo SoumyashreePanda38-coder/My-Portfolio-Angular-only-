@@ -1,0 +1,663 @@
+<section
+  class="project-details-section"
+  *ngIf="project"
+>
+
+  <!-- =====================================================
+       BACKGROUND
+  ====================================================== -->
+
+  <div class="details-glow details-glow-one"></div>
+  <div class="details-glow details-glow-two"></div>
+
+  <div class="details-grid"></div>
+
+
+  <div class="details-container">
+
+
+    <!-- ===================================================
+         TOP BAR
+    ==================================================== -->
+
+    <div class="details-topbar">
+
+      <button
+        type="button"
+        class="back-button"
+        (click)="goBack()"
+      >
+
+        <i class="bi bi-arrow-left"></i>
+
+        <span>
+          Back to Projects
+        </span>
+
+      </button>
+
+
+      <span class="project-number">
+        PROJECT / {{ project.name }}
+      </span>
+
+    </div>
+
+
+    <!-- ===================================================
+         PROJECT HEADER
+    ==================================================== -->
+
+    <header class="project-header">
+
+      <span class="project-category">
+        {{ project.category }}
+      </span>
+
+      <h1>
+        {{ project.name }}
+      </h1>
+
+      <div class="header-line"></div>
+
+      <p>
+        {{ project.overview }}
+      </p>
+
+    </header>
+
+
+    <!-- ===================================================
+         TECHNOLOGIES
+    ==================================================== -->
+
+    <section class="technologies-section">
+
+      <div class="section-label">
+
+        <span>01</span>
+
+        TECHNOLOGIES
+
+      </div>
+
+
+      <div class="technology-list">
+
+        <span
+          class="technology-tag"
+          *ngFor="
+            let technology of project.technologies
+          "
+        >
+
+          {{ technology }}
+
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         PROJECT GALLERY
+    ==================================================== -->
+
+    <section class="media-section">
+
+
+      <div class="section-heading">
+
+        <div>
+
+          <span class="section-number">
+            02 / VISUALS
+          </span>
+
+          <h2>
+            Project <span>Gallery</span>
+          </h2>
+
+        </div>
+
+
+        <!-- IMAGE COUNTER -->
+
+        <div class="gallery-counter">
+
+          <span class="gallery-current">
+            {{
+              (currentImageIndex + 1)
+                .toString()
+                .padStart(2, '0')
+            }}
+          </span>
+
+          <span class="gallery-divider">
+            /
+          </span>
+
+          <span class="gallery-total">
+            {{
+              project.images.length
+                .toString()
+                .padStart(2, '0')
+            }}
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           MAIN IMAGE CAROUSEL
+      ================================================== -->
+
+      <div
+        class="project-gallery"
+
+        (mouseenter)="stopAutoplay()"
+        (mouseleave)="startAutoplay()"
+      >
+
+
+        <!-- MAIN IMAGE -->
+
+        <div class="main-image-wrapper">
+
+
+          <!-- DECORATIVE NUMBER -->
+
+          <div class="image-background-number">
+
+            {{
+              (currentImageIndex + 1)
+                .toString()
+                .padStart(2, '0')
+            }}
+
+          </div>
+
+
+          <!-- FRAME -->
+
+          <div class="gallery-frame">
+
+
+            <!-- CORNERS -->
+
+            <span class="gallery-corner corner-tl"></span>
+            <span class="gallery-corner corner-tr"></span>
+            <span class="gallery-corner corner-bl"></span>
+            <span class="gallery-corner corner-br"></span>
+
+
+            <!-- GLOW -->
+
+            <div class="gallery-image-glow"></div>
+
+
+            <!-- IMAGE -->
+
+            <img
+              [src]="project.images[currentImageIndex]"
+              [alt]="
+                project.name +
+                ' screenshot ' +
+                (currentImageIndex + 1)
+              "
+              class="main-project-image"
+            />
+
+
+            <!-- IMAGE LABEL -->
+
+            <div class="image-label">
+
+              <span>
+                SCREEN
+                {{
+                  (currentImageIndex + 1)
+                    .toString()
+                    .padStart(2, '0')
+                }}
+              </span>
+
+            </div>
+
+
+            <!-- PREVIOUS -->
+
+            <button
+              type="button"
+              class="gallery-arrow gallery-arrow-left"
+              (click)="previousImage()"
+              aria-label="Previous image"
+            >
+
+              <i class="bi bi-arrow-left"></i>
+
+            </button>
+
+
+            <!-- NEXT -->
+
+            <button
+              type="button"
+              class="gallery-arrow gallery-arrow-right"
+              (click)="nextImage()"
+              aria-label="Next image"
+            >
+
+              <i class="bi bi-arrow-right"></i>
+
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- =================================================
+             THUMBNAILS
+        ================================================== -->
+
+        <div class="thumbnail-row">
+
+          <button
+            type="button"
+
+            class="thumbnail"
+
+            *ngFor="
+              let image of project.images;
+              let i = index
+            "
+
+            [class.active]="
+              i === currentImageIndex
+            "
+
+            (click)="selectImage(i)"
+
+            [attr.aria-label]="
+              'View image ' + (i + 1)
+            "
+          >
+
+            <span class="thumbnail-number">
+
+              {{
+                (i + 1)
+                  .toString()
+                  .padStart(2, '0')
+              }}
+
+            </span>
+
+
+            <img
+              [src]="image"
+              [alt]="
+                project.name +
+                ' thumbnail ' +
+                (i + 1)
+              "
+            />
+
+          </button>
+
+        </div>
+
+
+        <!-- =================================================
+             PROGRESS
+        ================================================== -->
+
+        <div class="gallery-progress">
+
+          <div class="progress-track">
+
+            <div
+              class="progress-fill"
+
+              [style.width.%]="
+                ((currentImageIndex + 1) /
+                project.images.length) * 100
+              "
+            ></div>
+
+          </div>
+
+
+          <span>
+            AUTOMATIC PREVIEW
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         VIDEO DEMO
+    ==================================================== -->
+
+    <section class="video-section">
+
+      <div class="section-heading">
+
+        <div>
+
+          <span class="section-number">
+            03 / DEMONSTRATION
+          </span>
+
+          <h2>
+            Project <span>Demo</span>
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div class="video-card">
+
+        <video
+          controls
+          preload="metadata"
+        >
+
+          <source
+            [src]="project.videoUrl"
+            type="video/mp4"
+          />
+
+          Your browser does not support
+          the video element.
+
+        </video>
+
+
+        <div class="video-caption">
+
+          <i class="bi bi-play-circle"></i>
+
+          <span>
+            Project walkthrough and feature demonstration
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         DOCUMENTATION
+    ==================================================== -->
+
+    <section class="documentation-section">
+
+      <div class="section-heading">
+
+        <div>
+
+          <span class="section-number">
+            04 / DOCUMENTATION
+          </span>
+
+          <h2>
+            Project <span>Documentation</span>
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div class="documentation-card">
+
+        <div class="document-icon">
+
+          <i class="bi bi-file-earmark-pdf"></i>
+
+        </div>
+
+
+        <div class="document-info">
+
+          <span>
+            PROJECT DOCUMENTATION
+          </span>
+
+          <h3>
+            {{ project.name }} Documentation
+          </h3>
+
+          <p>
+            View the complete project documentation,
+            development details and supporting information.
+          </p>
+
+        </div>
+
+
+        <a
+          class="document-button"
+
+          [href]="project.documentationUrl"
+
+          target="_blank"
+
+          rel="noopener noreferrer"
+        >
+
+          <i class="bi bi-file-earmark-pdf"></i>
+
+          <span>
+            View PDF
+          </span>
+
+          <i class="bi bi-arrow-up-right"></i>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         PROJECT LINKS
+    ==================================================== -->
+
+    <section class="links-section">
+
+      <div class="section-heading">
+
+        <div>
+
+          <span class="section-number">
+            05 / ACCESS
+          </span>
+
+          <h2>
+            Project <span>Links</span>
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div class="links-grid">
+
+
+        <!-- FRONTEND DEPLOYMENT -->
+
+        <div class="link-card">
+
+          <div class="link-icon deploy-icon">
+
+            <i class="bi bi-globe2"></i>
+
+          </div>
+
+
+          <div class="link-content">
+
+            <span>
+              DEPLOYED APPLICATION
+            </span>
+
+            <h3>
+              Frontend
+            </h3>
+
+            <p>
+              Open the live deployed version
+              of the project.
+            </p>
+
+          </div>
+
+
+          <button
+            type="button"
+            class="link-button"
+            (click)="openLink(project.frontendDeployUrl)"
+          >
+
+            <i class="bi bi-arrow-up-right"></i>
+
+          </button>
+
+        </div>
+
+
+        <!-- FRONTEND GITHUB -->
+
+        <div class="link-card">
+
+          <div class="link-icon">
+
+            <i class="bi bi-github"></i>
+
+          </div>
+
+
+          <div class="link-content">
+
+            <span>
+              SOURCE CODE
+            </span>
+
+            <h3>
+              Frontend GitHub
+            </h3>
+
+            <p>
+              View the frontend source code
+              and implementation.
+            </p>
+
+          </div>
+
+
+          <button
+            type="button"
+            class="link-button"
+            (click)="openLink(project.frontendGithubUrl)"
+          >
+
+            <i class="bi bi-arrow-up-right"></i>
+
+          </button>
+
+        </div>
+
+
+        <!-- BACKEND GITHUB -->
+
+        <div class="link-card">
+
+          <div class="link-icon backend-icon">
+
+            <i class="bi bi-server"></i>
+
+          </div>
+
+
+          <div class="link-content">
+
+            <span>
+              SOURCE CODE
+            </span>
+
+            <h3>
+              Backend GitHub
+            </h3>
+
+            <p>
+              View the backend source code
+              and server-side implementation.
+            </p>
+
+          </div>
+
+
+          <button
+            type="button"
+            class="link-button"
+            (click)="openLink(project.backendGithubUrl)"
+          >
+
+            <i class="bi bi-arrow-up-right"></i>
+
+          </button>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         FOOTER
+    ==================================================== -->
+
+    <div class="details-footer">
+
+      <div></div>
+
+      <span>
+
+        DESIGN
+
+        <i class="bi bi-arrow-right"></i>
+
+        DEVELOP
+
+        <i class="bi bi-arrow-right"></i>
+
+        DEPLOY
+
+      </span>
+
+      <div></div>
+
+    </div>
+
+
+  </div>
+
+</section>

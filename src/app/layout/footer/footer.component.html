@@ -1,0 +1,276 @@
+<footer class="portfolio-footer">
+
+  <!-- Ambient Effects -->
+  <div class="footer-glow glow-left"></div>
+  <div class="footer-glow glow-right"></div>
+  <div class="footer-grid"></div>
+
+  <div class="footer-container">
+
+    <!-- =========================================
+         TOP SIGNATURE AREA
+         ========================================= -->
+
+    <div class="footer-signature">
+
+      <div class="signature-main">
+
+        <span class="signature-index">
+          07 / END OF JOURNEY
+        </span>
+
+        <h2>
+          Built with
+          <span>purpose.</span>
+        </h2>
+
+        <p>
+          Designing, developing and continuously
+          evolving digital experiences.
+        </p>
+
+      </div>
+
+
+      <!-- Giant SP -->
+      <div class="giant-mark">
+
+        <span class="mark-outline">S</span>
+        <span class="mark-solid">P</span>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================================
+         DIVIDER
+         ========================================= -->
+
+    <div class="footer-divider">
+
+      <span class="divider-dot"></span>
+
+      <div class="divider-line"></div>
+
+      <span class="divider-code">
+        SP.DEV / 2026
+      </span>
+
+      <div class="divider-line"></div>
+
+      <span class="divider-dot"></span>
+
+    </div>
+
+
+    <!-- =========================================
+         FOOTER MATRIX
+         ========================================= -->
+
+    <div class="footer-matrix">
+
+
+      <!-- BRAND -->
+      <div class="footer-brand">
+
+        <div class="brand-logo">
+          SP
+        </div>
+
+        <div class="brand-info">
+
+          <strong>
+            soumyashree.dev
+          </strong>
+
+          <span>
+            FULLSTACK WEB DEVELOPER
+          </span>
+
+        </div>
+
+        <p>
+          Computer Science student passionate about
+          building modern web experiences and
+          full-stack applications.
+        </p>
+
+      </div>
+
+
+      <!-- NAVIGATION -->
+      <div class="footer-column">
+
+        <span class="column-label">
+          NAVIGATION
+        </span>
+
+        <a
+          *ngFor="let item of navigation"
+          [href]="item.link">
+
+          <span class="nav-number">
+            {{ item.number }}
+          </span>
+
+          <span>
+            {{ item.name }}
+          </span>
+
+        </a>
+
+      </div>
+
+
+      <!-- TECHNOLOGY -->
+      <div class="footer-column">
+
+        <span class="column-label">
+          TECHNOLOGY
+        </span>
+
+        <span class="tech-item">Angular</span>
+        <span class="tech-item">Spring Boot</span>
+        <span class="tech-item">Java</span>
+        <span class="tech-item">MySQL</span>
+        <span class="tech-item">TypeScript</span>
+
+      </div>
+
+
+      <!-- SYSTEM -->
+      <div class="footer-column system-column">
+
+        <span class="column-label">
+          SYSTEM STATUS
+        </span>
+
+        <div class="system-status">
+
+          <span class="system-light"></span>
+
+          <span>
+            PORTFOLIO ONLINE
+          </span>
+
+        </div>
+
+        <div class="system-row">
+
+          <span>BUILD</span>
+
+          <strong>
+            ANGULAR 15
+          </strong>
+
+        </div>
+
+        <div class="system-row">
+
+          <span>STATUS</span>
+
+          <strong>
+            AVAILABLE
+          </strong>
+
+        </div>
+
+        <div class="system-row">
+
+          <span>LOCATION</span>
+
+          <strong>
+            ODISHA, INDIA
+          </strong>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================================
+         SOCIAL / IDENTITY STRIP
+         ========================================= -->
+
+    <div class="identity-strip">
+
+      <div class="identity-left">
+
+        <span class="identity-prompt">
+          &gt;
+        </span>
+
+        <span>
+          SOUMYASHREE PANDA
+        </span>
+
+        <span class="identity-separator">
+          //
+        </span>
+
+        <span>
+          FULLSTACK DEVELOPER
+        </span>
+
+      </div>
+
+
+      <div class="identity-right">
+
+        <a
+          href="mailto:soumyashreepandacse2006@gmail.com"
+          aria-label="Email">
+
+          EMAIL
+        </a>
+
+        <span>·</span>
+
+        <span>
+          6371470683
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================================
+         BOTTOM BAR
+         ========================================= -->
+
+    <div class="footer-bottom">
+
+      <div>
+        © {{ currentYear }} Soumyashree Panda.
+        All rights reserved.
+      </div>
+
+      <div class="bottom-center">
+
+        <span class="pulse"></span>
+
+        Crafted with Angular &amp; creativity
+
+      </div>
+
+      <button
+        type="button"
+        class="back-top"
+        (click)="scrollToTop()">
+
+        BACK TO TOP
+
+        <span>↑</span>
+
+      </button>
+
+    </div>
+
+
+  </div>
+
+</footer>

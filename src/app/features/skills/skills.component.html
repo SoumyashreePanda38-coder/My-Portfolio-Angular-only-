@@ -1,0 +1,341 @@
+<section id="skills" class="skills-section">
+
+  <!-- Subtle background -->
+  <div class="skills-glow skills-glow-left"></div>
+  <div class="skills-glow skills-glow-right"></div>
+
+  <div class="skills-container">
+
+    <!-- ================= HEADER ================= -->
+
+    <div class="skills-header">
+
+      <span class="section-number">
+        03 / MY TECH STACK
+      </span>
+
+      <h2>
+        Skills <span>&amp;</span> Tools
+      </h2>
+
+      <div class="header-line"></div>
+
+      <p>
+        Technologies and development tools I use to build,
+        manage and deploy modern web applications.
+      </p>
+
+    </div>
+
+
+    <!-- ================= FRONTEND ================= -->
+
+    <div class="skill-category">
+
+      <div class="category-heading">
+
+        <div class="category-number">
+          01
+        </div>
+
+        <div>
+          <span>INTERFACE</span>
+          <h3>Frontend Development</h3>
+        </div>
+
+      </div>
+
+
+      <div class="technology-grid">
+
+        <div
+          class="technology-card"
+          *ngFor="let skill of frontendSkills"
+        >
+
+          <div class="tech-icon">
+            <img
+              [src]="skill.icon"
+              [alt]="skill.name"
+            />
+          </div>
+
+          <div class="tech-info">
+            <h4>{{ skill.name }}</h4>
+            <p>Frontend</p>
+          </div>
+
+          <i class="bi bi-arrow-up-right tech-arrow"></i>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ================= PROGRAMMING ================= -->
+
+    <div class="skill-category">
+
+      <div class="category-heading">
+
+        <div class="category-number">
+          02
+        </div>
+
+        <div>
+          <span>LOGIC &amp; PROBLEM SOLVING</span>
+          <h3>Programming &amp; DSA</h3>
+        </div>
+
+      </div>
+
+
+      <div class="technology-grid programming-grid">
+
+        <div
+          class="technology-card"
+          *ngFor="let skill of programmingSkills"
+        >
+
+          <div class="tech-icon">
+            <img
+              [src]="skill.icon"
+              [alt]="skill.name"
+            />
+          </div>
+
+          <div class="tech-info">
+            <h4>{{ skill.name }}</h4>
+            <p>Programming</p>
+          </div>
+
+          <i class="bi bi-arrow-up-right tech-arrow"></i>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ================= BACKEND ================= -->
+
+    <div class="skill-category">
+
+      <div class="category-heading">
+
+        <div class="category-number">
+          03
+        </div>
+
+        <div>
+          <span>SERVER &amp; DATA</span>
+          <h3>Backend &amp; Database</h3>
+        </div>
+
+      </div>
+
+
+      <div class="technology-grid">
+
+        <div
+          class="technology-card"
+          *ngFor="let skill of backendSkills"
+        >
+
+          <div class="tech-icon">
+            <img
+              [src]="skill.icon"
+              [alt]="skill.name"
+            />
+          </div>
+
+          <div class="tech-info">
+            <h4>{{ skill.name }}</h4>
+            <p>Backend &amp; Database</p>
+          </div>
+
+          <i class="bi bi-arrow-up-right tech-arrow"></i>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ================= DEVELOPMENT TOOLS ================= -->
+
+    <div class="skill-category">
+
+      <div class="category-heading">
+
+        <div class="category-number">
+          04
+        </div>
+
+        <div>
+          <span>WORKFLOW</span>
+          <h3>Development Tools</h3>
+        </div>
+
+      </div>
+
+
+      <div class="tool-grid">
+
+        <div
+          class="tool-card"
+          *ngFor="let tool of developmentTools"
+        >
+
+          <div class="tool-icon">
+            <img
+              [src]="tool.icon"
+              [alt]="tool.name"
+            />
+          </div>
+
+          <div>
+            <h4>{{ tool.name }}</h4>
+            <span>DEVELOPMENT TOOL</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ================= VERSION CONTROL ================= -->
+
+    <div class="skill-category">
+
+      <div class="category-heading">
+
+        <div class="category-number">
+          05
+        </div>
+
+        <div>
+          <span>COLLABORATION</span>
+          <h3>Version Control</h3>
+        </div>
+
+      </div>
+
+
+      <div class="control-grid">
+
+        <div
+          class="control-card"
+          *ngFor="let tool of versionControl"
+        >
+
+          <div class="control-icon">
+
+            <img
+              [src]="tool.icon"
+              [alt]="tool.name"
+            />
+
+          </div>
+
+          <div class="control-info">
+
+            <h4>{{ tool.name }}</h4>
+
+            <p>
+              Source code management
+            </p>
+
+          </div>
+
+          <i class="bi bi-git control-symbol"></i>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ================= DEPLOYMENT ================= -->
+
+    <div class="skill-category">
+
+      <div class="category-heading">
+
+        <div class="category-number">
+          06
+        </div>
+
+        <div>
+          <span>GO LIVE</span>
+          <h3>Deployment &amp; Hosting</h3>
+        </div>
+
+      </div>
+
+
+      <div class="deployment-grid">
+
+        <div
+          class="deployment-card"
+          *ngFor="let tool of deploymentTools"
+        >
+
+          <div class="deployment-icon">
+
+            <img
+              [src]="tool.icon"
+              [alt]="tool.name"
+            />
+
+          </div>
+
+          <h4>{{ tool.name }}</h4>
+
+          <div class="deployment-line"></div>
+
+          <span>
+            DEPLOYMENT
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ================= BOTTOM ================= -->
+
+    <div class="skills-bottom">
+
+      <div class="bottom-line"></div>
+
+      <div class="bottom-content">
+
+        <span>LEARN</span>
+
+        <i class="bi bi-chevron-right"></i>
+
+        <span>BUILD</span>
+
+        <i class="bi bi-chevron-right"></i>
+
+        <span>DEPLOY</span>
+
+      </div>
+
+      <div class="bottom-line"></div>
+
+    </div>
+
+  </div>
+
+</section>

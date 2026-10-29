@@ -1,0 +1,1202 @@
+/* =========================================================
+   HOME / HERO
+   PREMIUM CLASSIC DEVELOPER PORTFOLIO
+========================================================= */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  background:
+    radial-gradient(
+      circle at 12% 45%,
+      rgba(255, 0, 174, 0.13),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 82% 38%,
+      rgba(135, 55, 255, 0.16),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      #09070d 0%,
+      #0d0912 45%,
+      #09080e 100%
+    );
+
+  color: #ffffff;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+
+/* =========================================================
+   BACKGROUND ATMOSPHERE
+========================================================= */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+  width: 520px;
+  height: 520px;
+
+  right: -180px;
+  top: 10%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(137, 62, 255, 0.17),
+      rgba(137, 62, 255, 0.04) 45%,
+      transparent 72%
+    );
+
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+  width: 420px;
+  height: 420px;
+
+  left: -180px;
+  bottom: -120px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 0, 174, 0.13),
+      transparent 68%
+    );
+
+  filter: blur(35px);
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   SUBTLE GRID
+========================================================= */
+
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    );
+
+  background-size: 54px 54px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.12)
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   AMBIENT LIGHTS
+========================================================= */
+
+.ambient {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  pointer-events: none;
+}
+
+.ambient-one {
+  width: 260px;
+  height: 260px;
+
+  right: 18%;
+  top: 18%;
+
+  background: rgba(166, 52, 255, 0.08);
+
+  animation: ambientFloat 12s ease-in-out infinite;
+}
+
+.ambient-two {
+  width: 240px;
+  height: 240px;
+
+  left: 4%;
+  bottom: 8%;
+
+  background: rgba(255, 0, 166, 0.07);
+
+  animation: ambientFloatReverse 15s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.hero-container {
+  position: relative;
+  z-index: 5;
+
+  width: min(1180px, calc(100% - 80px));
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1.08fr 0.92fr;
+
+  align-items: center;
+
+  gap: 80px;
+
+  padding-top: 45px;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.hero-content {
+  max-width: 650px;
+
+  animation: contentReveal 0.9s ease forwards;
+}
+
+
+/* =========================================================
+   REMOVE THE OLD AVAILABILITY PILL
+========================================================= */
+
+.availability {
+  display: none;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro-text {
+  margin: 0 0 18px;
+
+  color: rgba(255, 105, 220, 0.82);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MAIN NAME
+========================================================= */
+
+.hero h1 {
+  margin: 0;
+
+  font-family:
+    "Space Grotesk",
+    "Inter",
+    "Segoe UI",
+    sans-serif;
+
+  font-size: clamp(58px, 7vw, 94px);
+
+  line-height: 0.9;
+
+  font-weight: 800;
+
+  letter-spacing: -5px;
+
+  color: #ffffff;
+
+  text-shadow:
+    0 0 35px rgba(255, 255, 255, 0.035);
+}
+
+
+/* First name */
+
+.hero h1::first-line {
+  color: #ffffff;
+}
+
+
+/* Last name */
+
+.hero h1 span {
+  display: block;
+
+  margin-top: 5px;
+
+  background:
+    linear-gradient(
+      105deg,
+      #ff4ed5 0%,
+      #e548ff 42%,
+      #9b63ff 100%
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  filter:
+    drop-shadow(
+      0 0 22px rgba(235, 58, 221, 0.18)
+    );
+}
+
+
+/* =========================================================
+   ROLE
+========================================================= */
+
+.role-wrapper {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  margin-top: 30px;
+}
+
+.role-line {
+  width: 42px;
+  height: 1px;
+
+  flex-shrink: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ff38c9,
+      rgba(255, 56, 201, 0)
+    );
+
+  box-shadow:
+    0 0 10px rgba(255, 56, 201, 0.55);
+}
+
+.role-wrapper h2 {
+  margin: 0;
+
+  color: #eee6f2;
+
+  font-family:
+    "Space Grotesk",
+    "Inter",
+    sans-serif;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.2px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.hero-description {
+  max-width: 570px;
+
+  margin: 25px 0 0;
+
+  color: #aaa2b2;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   TECHNOLOGY STACK
+========================================================= */
+
+.tech-stack {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-top: 27px;
+}
+
+.tech-stack span {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 13px;
+
+  border: 1px solid rgba(255, 70, 205, 0.18);
+
+  border-radius: 5px;
+
+  background:
+    rgba(255, 255, 255, 0.018);
+
+  color: #cfc5d4;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease,
+    background 0.3s ease;
+}
+
+.tech-stack span:hover {
+  color: #ff6bdc;
+
+  border-color:
+    rgba(255, 70, 205, 0.5);
+
+  background:
+    rgba(255, 70, 205, 0.045);
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.hero-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 34px;
+}
+
+.btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  min-height: 50px;
+
+  padding: 0 21px;
+
+  border-radius: 6px;
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+
+  text-transform: uppercase;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* Primary */
+
+.primary-btn {
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 101, 220, 0.7);
+
+  background:
+    linear-gradient(
+      110deg,
+      #e936c3,
+      #a942e8
+    );
+
+  box-shadow:
+    0 12px 30px rgba(192, 44, 190, 0.16);
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 16px 36px rgba(210, 44, 200, 0.25);
+}
+
+
+/* Secondary */
+
+.secondary-btn {
+  color: #d9d0dc;
+
+  border: 1px solid rgba(255, 255, 255, 0.13);
+
+  background:
+    rgba(255, 255, 255, 0.018);
+}
+
+.secondary-btn:hover {
+  transform: translateY(-3px);
+
+  color: #ffffff;
+
+  border-color:
+    rgba(255, 70, 205, 0.45);
+
+  background:
+    rgba(255, 70, 205, 0.045);
+}
+
+
+/* Arrow */
+
+.arrow {
+  font-size: 16px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.primary-btn:hover .arrow {
+  transform:
+    translate(3px, -2px);
+}
+
+
+/* =========================================================
+   SOCIALS
+========================================================= */
+
+.social-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 38px;
+}
+
+.social-links a {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 6px;
+
+  color: #a99faa;
+
+  background:
+    rgba(255, 255, 255, 0.018);
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  transition:
+    all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ff5bd5;
+
+  border-color:
+    rgba(255, 75, 205, 0.55);
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 8px 22px rgba(255, 50, 200, 0.1);
+}
+
+.social-line {
+  width: 45px;
+  height: 1px;
+
+  margin-left: 8px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 60, 204, 0.55),
+      rgba(255, 255, 255, 0.06)
+    );
+}
+
+.location {
+  color: #706875;
+
+  font-size: 9px;
+
+  letter-spacing: 1.6px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   RIGHT PROFILE AREA
+   CLEAN / EDITORIAL / PREMIUM
+========================================================= */
+
+.profile-area {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 590px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  animation:
+    profileReveal 1s ease forwards;
+}
+
+
+/* =========================================================
+   SINGLE SOFT PORTRAIT HALO
+========================================================= */
+
+.profile-area::before {
+  content: "";
+
+  position: absolute;
+
+  width: 400px;
+  height: 480px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(225, 40, 194, 0.12),
+      rgba(110, 50, 255, 0.07) 45%,
+      transparent 72%
+    );
+
+  filter: blur(35px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   REMOVE OLD DECORATIVE ORBITS
+========================================================= */
+
+.orbit {
+  display: none;
+}
+
+
+/* =========================================================
+   REMOVE FLOATING DOTS
+========================================================= */
+
+.floating-dot {
+  display: none;
+}
+
+
+/* =========================================================
+   REMOVE SIDE LABEL
+========================================================= */
+
+.side-label {
+  display: none;
+}
+
+
+/* =========================================================
+   PORTRAIT FRAME
+========================================================= */
+
+.profile-frame {
+  position: relative;
+
+  width: 330px;
+  height: 430px;
+
+  padding: 8px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 71, 211, 0.65),
+      rgba(146, 61, 255, 0.42) 48%,
+      rgba(255, 255, 255, 0.08)
+    );
+
+  border-radius: 4px;
+
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.025),
+    0 30px 80px rgba(0, 0, 0, 0.58),
+    0 0 55px rgba(212, 38, 190, 0.12);
+
+  transform: none;
+
+  animation: portraitFloat 8s ease-in-out infinite;
+
+  z-index: 4;
+}
+
+
+/* Inner dark frame */
+
+.profile-frame::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 8px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  pointer-events: none;
+
+  z-index: 3;
+}
+
+
+/* Thin magenta vertical accent */
+
+.profile-frame::after {
+  content: "";
+
+  position: absolute;
+
+  top: 32px;
+  bottom: 32px;
+
+  left: -12px;
+
+  width: 2px;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      #ff39ca 25%,
+      #b15cff 75%,
+      transparent
+    );
+
+  box-shadow:
+    0 0 12px rgba(255, 57, 202, 0.5);
+
+  z-index: 5;
+}
+
+
+/* =========================================================
+   PROFILE IMAGE
+========================================================= */
+
+.profile-image {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 1px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #171019,
+      #0c0a0f
+    );
+
+  filter:
+    grayscale(8%)
+    contrast(1.05)
+    saturate(1.02);
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   IMAGE GLOW
+========================================================= */
+
+.profile-glow {
+  position: absolute;
+
+  inset: -25px;
+
+  border-radius: 20px;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(255, 35, 198, 0.13),
+      rgba(123, 54, 255, 0.08),
+      transparent 70%
+    );
+
+  filter: blur(28px);
+
+  z-index: -1;
+}
+
+
+/* =========================================================
+   REMOVE OLD CORNER BRACKETS
+========================================================= */
+
+.frame-corner {
+  display: none;
+}
+
+
+/* =========================================================
+   REMOVE OLD FLOATING BADGES
+========================================================= */
+
+.developer-badge,
+.code-badge {
+  display: none;
+}
+
+
+/* =========================================================
+   SMALL EDITORIAL LABEL
+   Reuse developer badge space with a cleaner look
+========================================================= */
+
+.profile-area::after {
+  content: "S · PANDA / 2026";
+
+  position: absolute;
+
+  right: 4px;
+  bottom: 62px;
+
+  color: rgba(255, 255, 255, 0.24);
+
+  font-family:
+    "Space Grotesk",
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 2.5px;
+
+  writing-mode: vertical-rl;
+}
+
+
+/* =========================================================
+   SCROLL INDICATOR
+========================================================= */
+
+.scroll-indicator {
+  position: absolute;
+
+  left: 50%;
+  bottom: 22px;
+
+  transform:
+    translateX(-50%);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  color: rgba(255, 255, 255, 0.25);
+
+  font-size: 8px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  z-index: 6;
+}
+
+.scroll-line {
+  width: 48px;
+  height: 1px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    rgba(255, 255, 255, 0.1);
+}
+
+.scroll-line span {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 18px;
+  height: 1px;
+
+  background:
+    #ff39ca;
+
+  box-shadow:
+    0 0 8px rgba(255, 57, 202, 0.8);
+
+  animation:
+    scrollMove 2.4s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes contentReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes profileReveal {
+  from {
+    opacity: 0;
+    transform: translateX(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes portraitFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+
+@keyframes ambientFloat {
+  0%,
+  100% {
+    transform:
+      translate(0, 0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate(18px, -14px)
+      scale(1.05);
+  }
+}
+
+
+@keyframes ambientFloatReverse {
+  0%,
+  100% {
+    transform:
+      translate(0, 0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate(-15px, 12px)
+      scale(1.04);
+  }
+}
+
+
+@keyframes scrollMove {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+
+  35% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(52px);
+    opacity: 0;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .hero-container {
+    width: min(760px, calc(100% - 50px));
+
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+    padding-top: 110px;
+    padding-bottom: 90px;
+
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 680px;
+
+    margin: 0 auto;
+  }
+
+  .role-wrapper {
+    justify-content: center;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tech-stack {
+    justify-content: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .profile-area {
+    min-height: 520px;
+  }
+
+  .profile-area::after {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: 100vh;
+  }
+
+  .hero-container {
+    width: calc(100% - 36px);
+
+    gap: 35px;
+
+    padding-top: 105px;
+    padding-bottom: 75px;
+  }
+
+  .intro-text {
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 14px;
+  }
+
+  .hero h1 {
+    font-size:
+      clamp(48px, 15vw, 70px);
+
+    letter-spacing: -3px;
+  }
+
+  .role-wrapper {
+    margin-top: 24px;
+  }
+
+  .role-wrapper h2 {
+    font-size: 15px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+
+    line-height: 1.75;
+  }
+
+  .tech-stack {
+    gap: 7px;
+  }
+
+  .tech-stack span {
+    padding: 6px 10px;
+
+    font-size: 8px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 10px;
+  }
+
+  .btn {
+    width: 215px;
+  }
+
+  .social-links {
+    margin-top: 28px;
+  }
+
+  .location,
+  .social-line {
+    display: none;
+  }
+
+
+  /* Portrait */
+
+  .profile-area {
+    min-height: 400px;
+  }
+
+  .profile-frame {
+    width: 245px;
+    height: 320px;
+  }
+
+  .profile-frame::after {
+    left: -9px;
+
+    top: 24px;
+    bottom: 24px;
+  }
+
+
+  .scroll-indicator {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .hero-container {
+    width: calc(100% - 28px);
+  }
+
+  .profile-frame {
+    width: 220px;
+    height: 295px;
+  }
+
+  .hero h1 {
+    font-size: 47px;
+  }
+}

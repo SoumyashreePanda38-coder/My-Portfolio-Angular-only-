@@ -1,0 +1,772 @@
+/* =========================================================
+   SKILLS SECTION
+   MATTE BLACK + MAGENTA + PURPLE NEON
+   ========================================================= */
+
+.skills-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 120px 6% 100px;
+  background: #050507;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+   ========================================================= */
+
+.skills-glow {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(130px);
+  opacity: 0.15;
+}
+
+.skills-glow-left {
+  top: 15%;
+  left: -300px;
+  background: #ff009d;
+}
+
+.skills-glow-right {
+  right: -280px;
+  bottom: 10%;
+  background: #7800ff;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.skills-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.skills-header {
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.section-number {
+  display: inline-block;
+  margin-bottom: 18px;
+
+  color: #ff29c8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+
+  text-shadow:
+    0 0 10px rgba(255, 0, 180, 0.8);
+}
+
+.skills-header h2 {
+  margin: 0;
+
+  font-size: clamp(48px, 6vw, 78px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -3px;
+}
+
+.skills-header h2 span {
+  color: #ff00bb;
+
+  text-shadow:
+    0 0 10px #ff00bb,
+    0 0 30px rgba(255, 0, 187, 0.8),
+    0 0 60px rgba(126, 0, 255, 0.6);
+}
+
+.header-line {
+  width: 180px;
+  height: 2px;
+
+  margin: 28px auto 25px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #ff00b7,
+    #8800ff,
+    #ff00b7,
+    transparent
+  );
+
+  box-shadow:
+    0 0 10px #ff00b7,
+    0 0 25px rgba(130, 0, 255, 0.7);
+}
+
+.skills-header p {
+  max-width: 650px;
+  margin: auto;
+
+  color: #aaa5b7;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   CATEGORY
+   ========================================================= */
+
+.skill-category {
+  margin-bottom: 80px;
+}
+
+
+/* =========================================================
+   CATEGORY HEADING
+   ========================================================= */
+
+.category-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  margin-bottom: 30px;
+}
+
+.category-number {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ff28ca;
+  font-size: 13px;
+  font-weight: 700;
+
+  background: rgba(255, 0, 190, 0.04);
+
+  border: 1px solid rgba(255, 0, 190, 0.65);
+
+  box-shadow:
+    0 0 15px rgba(255, 0, 190, 0.18),
+    inset 0 0 15px rgba(255, 0, 190, 0.04);
+
+  clip-path: polygon(
+    15% 0,
+    85% 0,
+    100% 20%,
+    100% 80%,
+    85% 100%,
+    15% 100%,
+    0 80%,
+    0 20%
+  );
+}
+
+.category-heading span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #8e789d;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+.category-heading h3 {
+  margin: 0;
+
+  font-size: 26px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   TECHNOLOGY GRID
+   ========================================================= */
+
+.technology-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+
+/* =========================================================
+   TECHNOLOGY CARD
+   ========================================================= */
+
+.technology-card {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  min-height: 105px;
+  padding: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 0, 170, 0.045),
+      rgba(100, 0, 255, 0.025)
+    ),
+    #09080d;
+
+  border: 1px solid rgba(255, 0, 190, 0.22);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  overflow: hidden;
+}
+
+
+/* top neon line */
+
+.technology-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 45px;
+  height: 2px;
+
+  background: #ff00b7;
+
+  box-shadow:
+    0 0 10px #ff00b7,
+    0 0 20px rgba(255, 0, 183, 0.7);
+}
+
+
+/* bottom purple line */
+
+.technology-card::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  width: 35px;
+  height: 2px;
+
+  background: #8500ff;
+
+  box-shadow:
+    0 0 10px #8500ff;
+}
+
+
+.technology-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(255, 0, 195, 0.75);
+
+  box-shadow:
+    0 0 20px rgba(255, 0, 190, 0.15),
+    0 0 40px rgba(110, 0, 255, 0.08),
+    inset 0 0 20px rgba(255, 0, 190, 0.025);
+}
+
+
+/* =========================================================
+   TECHNOLOGY ICON
+   ========================================================= */
+
+.tech-icon {
+  width: 55px;
+  height: 55px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 18px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid rgba(255, 0, 190, 0.15);
+}
+
+.tech-icon img {
+  width: 40px;
+  height: 40px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 0 5px rgba(255, 0, 190, 0.2));
+
+  transition: 0.3s ease;
+}
+
+.technology-card:hover .tech-icon img {
+  transform: scale(1.1);
+
+  filter:
+    drop-shadow(0 0 8px rgba(255, 0, 190, 0.5));
+}
+
+
+/* =========================================================
+   TECHNOLOGY INFORMATION
+   ========================================================= */
+
+.tech-info {
+  flex: 1;
+}
+
+.tech-info h4 {
+  margin: 0 0 5px;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.tech-info p {
+  margin: 0;
+
+  color: #756d7d;
+
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   ARROW
+   ========================================================= */
+
+.tech-arrow {
+  color: #6d526f;
+
+  font-size: 13px;
+
+  transition: 0.3s ease;
+}
+
+.technology-card:hover .tech-arrow {
+  color: #ff00bd;
+
+  transform: translate(3px, -3px);
+
+  text-shadow:
+    0 0 10px #ff00bd;
+}
+
+
+/* =========================================================
+   DEVELOPMENT TOOLS
+   ========================================================= */
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.tool-card {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 22px;
+
+  background: #09080d;
+
+  border: 1px solid rgba(130, 0, 255, 0.25);
+
+  transition: 0.3s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(255, 0, 190, 0.7);
+
+  box-shadow:
+    0 0 22px rgba(255, 0, 190, 0.15);
+}
+
+.tool-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 0, 190, 0.15);
+}
+
+.tool-icon img {
+  width: 36px;
+  height: 36px;
+
+  object-fit: contain;
+}
+
+.tool-card h4 {
+  margin: 0 0 5px;
+
+  font-size: 15px;
+}
+
+.tool-card span {
+  color: #716878;
+
+  font-size: 8px;
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   VERSION CONTROL
+   ========================================================= */
+
+.control-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.control-card {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 25px;
+
+  background: #09080d;
+
+  border: 1px solid rgba(255, 0, 190, 0.2);
+
+  transition: 0.3s ease;
+}
+
+.control-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #8900ff;
+
+  box-shadow:
+    0 0 25px rgba(123, 0, 255, 0.18);
+}
+
+.control-icon {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(130, 0, 255, 0.2);
+}
+
+.control-icon img {
+  width: 40px;
+  height: 40px;
+
+  object-fit: contain;
+}
+
+.control-info {
+  flex: 1;
+}
+
+.control-info h4 {
+  margin: 0 0 6px;
+
+  font-size: 17px;
+}
+
+.control-info p {
+  margin: 0;
+
+  color: #766c7e;
+
+  font-size: 10px;
+}
+
+.control-symbol {
+  color: #8b00ff;
+
+  font-size: 18px;
+
+  text-shadow:
+    0 0 10px #8b00ff;
+}
+
+
+/* =========================================================
+   DEPLOYMENT
+   ========================================================= */
+
+.deployment-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.deployment-card {
+  text-align: center;
+
+  padding: 28px 15px;
+
+  background: #09080d;
+
+  border: 1px solid rgba(130, 0, 255, 0.22);
+
+  transition: 0.3s ease;
+}
+
+.deployment-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(255, 0, 190, 0.75);
+
+  box-shadow:
+    0 0 25px rgba(255, 0, 190, 0.15);
+}
+
+.deployment-icon {
+  width: 55px;
+  height: 55px;
+
+  margin: 0 auto 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 0, 190, 0.14);
+}
+
+.deployment-icon img {
+  width: 40px;
+  height: 40px;
+
+  object-fit: contain;
+}
+
+.deployment-card h4 {
+  margin: 0 0 12px;
+
+  font-size: 15px;
+}
+
+.deployment-line {
+  width: 35px;
+  height: 2px;
+
+  margin: 0 auto 10px;
+
+  background: linear-gradient(
+    90deg,
+    #ff00a8,
+    #8500ff
+  );
+
+  box-shadow:
+    0 0 8px #ff00b7;
+}
+
+.deployment-card span {
+  color: #756c7e;
+
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   BOTTOM
+   ========================================================= */
+
+.skills-bottom {
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+
+  margin-top: 100px;
+}
+
+.bottom-line {
+  flex: 1;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 0, 190, 0.45)
+  );
+}
+
+.bottom-line:last-child {
+  background: linear-gradient(
+    90deg,
+    rgba(125, 0, 255, 0.45),
+    transparent
+  );
+}
+
+.bottom-content {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  color: #a898b3;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.bottom-content i {
+  color: #ff00b7;
+
+  font-size: 12px;
+
+  text-shadow:
+    0 0 8px #ff00b7;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .technology-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tool-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .deployment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .skills-section {
+    padding: 90px 20px 70px;
+  }
+
+  .skills-header {
+    margin-bottom: 65px;
+  }
+
+  .skills-header h2 {
+    font-size: 44px;
+    letter-spacing: -2px;
+  }
+
+  .skills-header p {
+    font-size: 14px;
+  }
+
+  .skill-category {
+    margin-bottom: 60px;
+  }
+
+  .technology-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tool-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .control-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .deployment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .category-heading h3 {
+    font-size: 21px;
+  }
+
+  .category-heading span {
+    font-size: 8px;
+  }
+
+  .category-number {
+    width: 43px;
+    height: 43px;
+  }
+
+  .skills-bottom {
+    gap: 12px;
+  }
+
+  .bottom-content {
+    gap: 9px;
+    font-size: 7px;
+    letter-spacing: 1.5px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .deployment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-header h2 {
+    font-size: 37px;
+  }
+
+  .technology-card {
+    padding: 17px;
+  }
+
+}

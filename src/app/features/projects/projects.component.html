@@ -1,0 +1,236 @@
+<section id="projects" class="projects-section">
+
+  <!-- Background glow -->
+  <div class="projects-glow projects-glow-one"></div>
+  <div class="projects-glow projects-glow-two"></div>
+
+  <div class="projects-container">
+
+
+    <!-- ================= HEADER ================= -->
+
+    <div class="projects-header">
+
+      <span class="section-number">
+        05 / SELECTED WORK
+      </span>
+
+      <h2>
+        My <span>Projects</span>
+      </h2>
+
+      <div class="header-line"></div>
+
+      <p>
+        A collection of projects I have designed and developed
+        across frontend, backend and full-stack development.
+      </p>
+
+    </div>
+
+
+    <!-- ================= PROJECT GRID ================= -->
+
+    <div class="projects-grid">
+
+
+      <!-- PROJECT CARD -->
+
+      <article
+        class="project-card"
+        *ngFor="let project of projects"
+      >
+
+        <!-- ================= THUMBNAIL ================= -->
+
+        <div class="project-thumbnail">
+
+          <img
+            [src]="project.thumbnail"
+            [alt]="project.name + ' project thumbnail'"
+          />
+
+
+          <!-- Dark overlay -->
+
+          <div class="thumbnail-overlay">
+
+            <span class="project-index">
+              {{ project.id < 10 ? '0' + project.id : project.id }}
+            </span>
+
+            <span class="project-category">
+              PROJECT
+            </span>
+
+          </div>
+
+
+          <!-- Upload / change thumbnail -->
+
+          <label
+            class="thumbnail-upload"
+            [attr.for]="'thumbnail-' + project.id"
+            title="Change project thumbnail"
+          >
+
+            <i class="bi bi-camera"></i>
+
+          </label>
+
+          <input
+            class="thumbnail-input"
+            type="file"
+            accept="image/*"
+            [id]="'thumbnail-' + project.id"
+            (change)="onThumbnailUpload($event, project)"
+          />
+
+        </div>
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <div class="project-content">
+
+
+          <!-- Project title -->
+
+          <div class="project-heading">
+
+            <div>
+
+              <span class="project-label">
+                PROJECT {{ project.id < 10 ? '0' + project.id : project.id }}
+              </span>
+
+              <h3>
+                {{ project.name }}
+              </h3>
+
+            </div>
+
+            <i
+              class="bi bi-arrow-up-right project-symbol">
+            </i>
+
+          </div>
+
+
+          <!-- Overview -->
+
+          <p class="project-description">
+            {{ project.shortDescription }}
+          </p>
+
+
+          <!-- Technology -->
+
+          <div class="technology-list">
+
+            <span
+              class="technology-tag"
+              *ngFor="let technology of project.technologies"
+            >
+              {{ technology }}
+            </span>
+
+          </div>
+
+
+          <!-- ================= ACTIONS ================= -->
+
+          <div class="project-actions">
+
+
+            <!-- Live project -->
+
+            <button
+              type="button"
+              class="project-link"
+              (click)="openProject(project.liveUrl)"
+            >
+
+              <i class="bi bi-box-arrow-up-right"></i>
+
+              <span>
+                Live Project
+              </span>
+
+            </button>
+
+
+            <!-- GitHub -->
+
+            <button
+              type="button"
+              class="github-link"
+              (click)="openProject(project.githubUrl)"
+            >
+
+              <i class="bi bi-github"></i>
+
+              <span>
+                GitHub
+              </span>
+
+            </button>
+
+
+            <!-- Project details -->
+
+            <a
+              class="details-button"
+              [routerLink]="['/projects', project.slug]"
+            >
+
+              <span>
+                View Details
+              </span>
+
+              <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <div class="projects-bottom">
+
+      <div class="bottom-line"></div>
+
+      <div class="bottom-content">
+
+        <span>
+          DESIGN
+        </span>
+
+        <i class="bi bi-arrow-right"></i>
+
+        <span>
+          DEVELOP
+        </span>
+
+        <i class="bi bi-arrow-right"></i>
+
+        <span>
+          DEPLOY
+        </span>
+
+      </div>
+
+      <div class="bottom-line"></div>
+
+    </div>
+
+  </div>
+
+</section>

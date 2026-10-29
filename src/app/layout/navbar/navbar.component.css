@@ -1,0 +1,682 @@
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 74px;
+  z-index: 1000;
+
+  background: rgba(7, 5, 10, 0.82);
+  border-bottom: 1px solid rgba(255, 48, 196, 0.12);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  transition: all 0.35s ease;
+}
+
+
+/* =========================================================
+   SCROLLED NAVBAR
+========================================================= */
+
+.navbar.scrolled {
+  background: rgba(5, 4, 8, 0.96);
+  border-bottom-color: rgba(255, 48, 196, 0.22);
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.35),
+    0 1px 0 rgba(255, 48, 196, 0.08);
+}
+
+
+/* =========================================================
+   NAV CONTAINER
+========================================================= */
+
+.nav-container {
+  width: min(1280px, calc(100% - 64px));
+  height: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 32px;
+}
+
+
+/* =========================================================
+   BRAND — SP + SOUMYASHREE.DEV
+========================================================= */
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   SP LOGO
+========================================================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+}
+
+.logo-mark {
+  width: 40px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 48, 196, 0.65);
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 48, 196, 0.14),
+      rgba(116, 32, 255, 0.08)
+    );
+
+  box-shadow:
+    0 0 18px rgba(255, 48, 196, 0.12),
+    inset 0 0 15px rgba(255, 48, 196, 0.04);
+
+  transition: all 0.3s ease;
+}
+
+.logo:hover .logo-mark {
+  border-color: #ff30c4;
+
+  box-shadow:
+    0 0 20px rgba(255, 48, 196, 0.3),
+    inset 0 0 15px rgba(255, 48, 196, 0.08);
+
+  transform: translateY(-1px);
+}
+
+.logo-sp {
+  color: #ffffff;
+
+  font-family: "Space Grotesk", "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+
+/* =========================================================
+   SOUMYASHREE.DEV
+========================================================= */
+
+.site-name {
+  position: relative;
+
+  color: #f6f2f7;
+  text-decoration: none;
+
+  font-family: "Space Grotesk", "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: -0.025em;
+
+  white-space: nowrap;
+
+  transition: color 0.3s ease;
+}
+
+.site-name::before {
+  content: "";
+
+  display: inline-block;
+
+  width: 5px;
+  height: 5px;
+
+  margin-right: 8px;
+
+  border-radius: 50%;
+
+  background: #ff30c4;
+
+  box-shadow:
+    0 0 8px rgba(255, 48, 196, 0.8),
+    0 0 16px rgba(255, 48, 196, 0.35);
+}
+
+.site-name:hover {
+  color: #ff54d0;
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.nav-links {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+}
+
+
+/* =========================================================
+   NAV LINK
+========================================================= */
+
+.nav-link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 10px 11px;
+
+  color: rgba(255, 255, 255, 0.52);
+
+  text-decoration: none;
+
+  font-family: "Space Grotesk", "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition: all 0.3s ease;
+}
+
+.link-number {
+  color: rgba(255, 48, 196, 0.55);
+
+  font-size: 8px;
+  font-weight: 700;
+
+  transform: translateY(-2px);
+
+  transition: color 0.3s ease;
+}
+
+.link-text {
+  transition: color 0.3s ease;
+}
+
+
+/* =========================================================
+   NAV HOVER
+========================================================= */
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 11px;
+  right: 11px;
+  bottom: 3px;
+
+  height: 1px;
+
+  background: #ff30c4;
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  box-shadow:
+    0 0 8px rgba(255, 48, 196, 0.7);
+
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link:hover .link-number {
+  color: #ff30c4;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.nav-link.active {
+  color: #ffffff;
+}
+
+.nav-link.active .link-number {
+  color: #ff30c4;
+}
+
+
+/* =========================================================
+   RIGHT ACTIONS
+========================================================= */
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   LET'S TALK
+========================================================= */
+
+.contact-btn,
+.resume-btn {
+  height: 37px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  padding: 0 15px;
+
+  border-radius: 9px;
+
+  text-decoration: none;
+
+  font-family: "Space Grotesk", "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  transition: all 0.3s ease;
+}
+
+
+/* Let's Talk */
+
+.contact-btn {
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 48, 196, 0.38);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 48, 196, 0.08),
+      rgba(95, 20, 70, 0.12)
+    );
+
+  box-shadow:
+    inset 0 0 20px rgba(255, 48, 196, 0.025);
+}
+
+.contact-btn:hover {
+  border-color: rgba(255, 48, 196, 0.75);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 48, 196, 0.16),
+      rgba(95, 20, 70, 0.18)
+    );
+
+  box-shadow:
+    0 0 20px rgba(255, 48, 196, 0.13);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   RESUME
+========================================================= */
+
+.resume-btn {
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 48, 196, 0.65);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 48, 196, 0.17),
+      rgba(127, 28, 93, 0.18)
+    );
+
+  box-shadow:
+    0 0 15px rgba(255, 48, 196, 0.08),
+    inset 0 0 18px rgba(255, 48, 196, 0.04);
+}
+
+.resume-btn:hover {
+  border-color: #ff30c4;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 48, 196, 0.25),
+      rgba(127, 28, 93, 0.26)
+    );
+
+  box-shadow:
+    0 0 24px rgba(255, 48, 196, 0.2);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ARROWS
+========================================================= */
+
+.contact-arrow,
+.resume-arrow {
+  color: #ff30c4;
+
+  font-size: 13px;
+
+  transition: transform 0.3s ease;
+}
+
+.contact-btn:hover .contact-arrow,
+.resume-btn:hover .resume-arrow {
+  transform: translate(2px, -2px);
+}
+
+
+/* =========================================================
+   MOBILE BUTTON
+========================================================= */
+
+.menu-toggle {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+
+  margin-left: auto;
+
+  border: 1px solid rgba(255, 48, 196, 0.3);
+  border-radius: 9px;
+
+  background: rgba(255, 48, 196, 0.04);
+
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+
+  width: 17px;
+  height: 1px;
+
+  margin: 4px auto;
+
+  background: #ffffff;
+
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-menu {
+  display: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+/* =========================================================
+   TABLET / COMPACT DESKTOP
+========================================================= */
+
+@media (max-width: 1150px) {
+
+  .nav-container {
+    width: min(100% - 40px, 1280px);
+    gap: 16px;
+  }
+
+  .nav-links {
+    gap: 0;
+  }
+
+  .nav-link {
+    padding: 10px 6px;
+    font-size: 10.5px;
+  }
+
+  .link-number {
+    display: none;
+  }
+
+  .contact-btn,
+  .resume-btn {
+    padding: 0 10px;
+    font-size: 9px;
+  }
+
+}
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .navbar {
+    height: 68px;
+  }
+
+  .nav-container {
+    width: calc(100% - 32px);
+  }
+
+  .nav-links,
+  .nav-actions {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .site-name {
+    font-size: 13px;
+  }
+
+  .logo-mark {
+    width: 38px;
+    height: 35px;
+  }
+
+
+  /* MOBILE MENU */
+
+  .mobile-menu {
+    position: fixed;
+
+    top: 68px;
+    left: 0;
+
+    width: 100%;
+    height: calc(100vh - 68px);
+
+    display: block;
+
+    background:
+      radial-gradient(
+        circle at 20% 20%,
+        rgba(255, 48, 196, 0.08),
+        transparent 30%
+      ),
+      #08060b;
+
+    border-top: 1px solid rgba(255, 48, 196, 0.12);
+
+    transform: translateX(100%);
+
+    transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+
+    overflow-y: auto;
+  }
+
+  .mobile-menu.open {
+    transform: translateX(0);
+  }
+
+  .mobile-menu-inner {
+    padding: 30px 24px 40px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-menu-inner > a:not(.mobile-contact):not(.mobile-resume) {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 17px 0;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+    text-decoration: none;
+
+    font-family: "Space Grotesk", "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .mobile-menu-inner > a:hover {
+    color: #ffffff;
+  }
+
+  .mobile-number {
+    width: 24px;
+
+    color: #ff30c4;
+
+    font-size: 9px;
+    font-weight: 800;
+  }
+
+  .mobile-site-name {
+    margin: 28px 0 20px;
+
+    color: #ff30c4;
+
+    font-family: "Space Grotesk", "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 0.03em;
+  }
+
+  .mobile-contact,
+  .mobile-resume {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 16px;
+
+    margin-top: 10px;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-family: "Space Grotesk", "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .mobile-contact {
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 48, 196, 0.35);
+
+    background: rgba(255, 48, 196, 0.06);
+  }
+
+  .mobile-resume {
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 48, 196, 0.65);
+
+    background: rgba(255, 48, 196, 0.13);
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .nav-container {
+    width: calc(100% - 24px);
+  }
+
+  .nav-brand {
+    gap: 10px;
+  }
+
+  .site-name {
+    font-size: 12px;
+  }
+
+  .logo-mark {
+    width: 36px;
+    height: 34px;
+  }
+
+  .logo-sp {
+    font-size: 12px;
+  }
+
+}

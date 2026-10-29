@@ -1,0 +1,1974 @@
+/* =========================================================
+   CONTACT SECTION
+   Burgundy + Purple Neon
+   Futuristic Communication Terminal
+   ========================================================= */
+
+.contact-section {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 130px 0 90px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 15% 25%,
+      rgba(150, 0, 85, 0.16),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 70%,
+      rgba(100, 45, 190, 0.13),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      #100009 0%,
+      #17000f 38%,
+      #100016 72%,
+      #07000d 100%
+    );
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   MAIN BACKGROUND
+   ========================================================= */
+
+.contact-bg {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      115deg,
+      transparent 0%,
+      rgba(255, 0, 140, 0.025) 45%,
+      transparent 70%
+    );
+
+  opacity: 0.9;
+}
+
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.contact-grid {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.22;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 0, 140, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(160, 70, 255, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 70px 70px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      transparent,
+      black 15%,
+      black 85%,
+      transparent
+    );
+}
+
+
+/* =========================================================
+   BACKGROUND ORBS
+   ========================================================= */
+
+.contact-orb {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(90px);
+
+  opacity: 0.16;
+}
+
+
+.orb-one {
+  width: 420px;
+  height: 420px;
+
+  top: 5%;
+  left: -180px;
+
+  background: #a0005c;
+
+  animation: orbFloatOne 10s ease-in-out infinite;
+}
+
+
+.orb-two {
+  width: 380px;
+  height: 380px;
+
+  right: -150px;
+  top: 35%;
+
+  background: #7625c9;
+
+  animation: orbFloatTwo 12s ease-in-out infinite;
+}
+
+
+.orb-three {
+  width: 250px;
+  height: 250px;
+
+  bottom: -100px;
+  left: 40%;
+
+  background: #e00088;
+
+  opacity: 0.08;
+
+  animation: orbFloatThree 9s ease-in-out infinite;
+}
+
+
+@keyframes orbFloatOne {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(60px, 40px);
+  }
+
+}
+
+
+@keyframes orbFloatTwo {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-50px, -35px);
+  }
+
+}
+
+
+@keyframes orbFloatThree {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-45px);
+  }
+
+}
+
+
+/* =========================================================
+   SCAN LINES
+   ========================================================= */
+
+.scan-line {
+  position: absolute;
+
+  width: 100%;
+
+  height: 1px;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 0, 140, 0.3),
+      rgba(155, 70, 255, 0.45),
+      transparent
+    );
+
+  opacity: 0.35;
+}
+
+
+.scan-one {
+  top: 27%;
+
+  animation:
+    scanMoveOne 8s linear infinite;
+}
+
+
+.scan-two {
+  top: 72%;
+
+  animation:
+    scanMoveTwo 11s linear infinite;
+}
+
+
+@keyframes scanMoveOne {
+
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+
+}
+
+
+@keyframes scanMoveTwo {
+
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.contact-container {
+  position: relative;
+
+  width: min(1200px, 90%);
+
+  margin: 0 auto;
+
+  z-index: 5;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.contact-header {
+  margin-bottom: 75px;
+}
+
+
+.header-index {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  margin-bottom: 28px;
+
+  color: #e15ab0;
+
+  font-family: monospace;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+.index-line {
+  width: 42px;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #ff3cae
+    );
+
+  box-shadow:
+    0 0 12px rgba(255, 0, 140, 0.8);
+}
+
+
+.header-main {
+  display: grid;
+
+  grid-template-columns: 1.2fr 0.8fr;
+
+  gap: 100px;
+
+  align-items: end;
+}
+
+
+.eyebrow {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: rgba(220, 190, 215, 0.42);
+
+  font-family: monospace;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+.header-title h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(48px, 6vw, 82px);
+
+  line-height: 0.92;
+
+  font-weight: 800;
+
+  letter-spacing: -4px;
+}
+
+
+.header-title h2 span {
+  display: block;
+
+  color: #df65bd;
+}
+
+
+.header-title h2 strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-weight: 800;
+
+  text-shadow:
+    0 0 30px rgba(225, 0, 135, 0.16);
+}
+
+
+.header-description {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  padding-bottom: 7px;
+}
+
+
+.description-bracket {
+  color: #b949a3;
+
+  font-family: monospace;
+
+  font-size: 28px;
+
+  line-height: 1;
+
+  text-shadow:
+    0 0 15px rgba(210, 0, 140, 0.5);
+}
+
+
+.header-description p {
+  margin: 0;
+
+  max-width: 390px;
+
+  color: rgba(225, 210, 224, 0.58);
+
+  font-size: 13px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   CONTACT SYSTEM
+   ========================================================= */
+
+.contact-system {
+  display: grid;
+
+  grid-template-columns: 0.85fr 1.15fr;
+
+  gap: 55px;
+
+  align-items: stretch;
+
+  margin-bottom: 65px;
+}
+
+
+/* =========================================================
+   CONTACT IDENTITY
+   ========================================================= */
+
+.contact-identity {
+  position: relative;
+
+  min-height: 560px;
+
+  padding: 38px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 40, 155, 0.18);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(72, 0, 42, 0.55),
+      rgba(17, 4, 25, 0.75)
+    );
+
+  clip-path:
+    polygon(
+      0 22px,
+      22px 0,
+      100% 0,
+      100% calc(100% - 22px),
+      calc(100% - 22px) 100%,
+      0 100%
+    );
+
+  box-shadow:
+    inset 0 0 60px rgba(170, 0, 100, 0.035),
+    0 25px 80px rgba(0, 0, 0, 0.35);
+}
+
+
+.contact-identity::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 12%;
+
+  width: 55%;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #ff36ad,
+      transparent
+    );
+
+  box-shadow:
+    0 0 15px rgba(255, 0, 140, 0.7);
+}
+
+
+.contact-identity::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+
+  width: 100px;
+  height: 100px;
+
+  border-right: 1px solid rgba(188, 68, 255, 0.35);
+
+  border-bottom: 1px solid rgba(255, 35, 160, 0.3);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   IDENTITY TOP
+   ========================================================= */
+
+.identity-top {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: rgba(220, 190, 220, 0.45);
+
+  font-family: monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 1.7px;
+}
+
+
+.identity-number {
+  color: #ff48b7;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+
+.identity-line {
+  width: 30px;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ff2ca5,
+      transparent
+    );
+}
+
+
+/* =========================================================
+   IDENTITY HEADING
+   ========================================================= */
+
+.contact-identity h3 {
+  position: relative;
+
+  margin: 55px 0 22px;
+
+  font-size: clamp(34px, 4vw, 52px);
+
+  line-height: 0.98;
+
+  letter-spacing: -2.5px;
+
+  font-weight: 800;
+}
+
+
+.contact-identity h3 span {
+  color: #b968f1;
+
+  text-shadow:
+    0 0 25px rgba(155, 60, 240, 0.25);
+}
+
+
+.identity-description {
+  max-width: 410px;
+
+  margin: 0;
+
+  color: rgba(225, 205, 220, 0.55);
+
+  font-size: 13px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   AVAILABILITY TERMINAL
+   ========================================================= */
+
+.availability-terminal {
+  position: absolute;
+
+  left: 38px;
+  right: 38px;
+  bottom: 38px;
+
+  border: 1px solid rgba(220, 50, 155, 0.15);
+
+  background:
+    rgba(8, 2, 12, 0.65);
+
+  box-shadow:
+    inset 0 0 25px rgba(170, 0, 100, 0.025);
+}
+
+
+.terminal-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 12px 15px;
+
+  border-bottom: 1px solid rgba(210, 50, 150, 0.1);
+
+  color: rgba(220, 195, 215, 0.4);
+
+  font-family: monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 1.4px;
+}
+
+
+.terminal-dot {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #ff39ae;
+
+  box-shadow:
+    0 0 8px #ff39ae;
+
+  animation: terminalBlink 1.7s infinite;
+}
+
+
+@keyframes terminalBlink {
+
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+}
+
+
+.terminal-status {
+  margin-left: auto;
+
+  color: #d76bc1;
+}
+
+
+.terminal-body {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+
+  padding: 16px;
+
+  font-family: monospace;
+
+  font-size: 9px;
+}
+
+
+.terminal-command {
+  color: rgba(210, 190, 210, 0.4);
+}
+
+
+.terminal-success {
+  color: #f15ab5;
+
+  text-shadow:
+    0 0 10px rgba(255, 0, 140, 0.4);
+}
+
+
+/* =========================================================
+   ORBIT
+   ========================================================= */
+
+.contact-orbit {
+  position: absolute;
+
+  width: 210px;
+  height: 210px;
+
+  right: 25px;
+  top: 100px;
+
+  pointer-events: none;
+
+  opacity: 0.45;
+}
+
+
+.orbit-ring {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  border: 1px solid rgba(218, 54, 166, 0.18);
+
+  border-radius: 50%;
+
+  transform:
+    translate(-50%, -50%);
+}
+
+
+.ring-one {
+  width: 90px;
+  height: 90px;
+
+  animation:
+    orbitRotate 9s linear infinite;
+}
+
+
+.ring-two {
+  width: 145px;
+  height: 145px;
+
+  border-color: rgba(153, 78, 242, 0.15);
+
+  animation:
+    orbitRotateReverse 13s linear infinite;
+}
+
+
+.ring-three {
+  width: 195px;
+  height: 195px;
+
+  border-style: dashed;
+
+  border-color: rgba(224, 53, 165, 0.11);
+
+  animation:
+    orbitRotate 20s linear infinite;
+}
+
+
+@keyframes orbitRotate {
+
+  from {
+    transform:
+      translate(-50%, -50%)
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      translate(-50%, -50%)
+      rotate(360deg);
+  }
+
+}
+
+
+@keyframes orbitRotateReverse {
+
+  from {
+    transform:
+      translate(-50%, -50%)
+      rotate(360deg);
+  }
+
+  to {
+    transform:
+      translate(-50%, -50%)
+      rotate(0deg);
+  }
+
+}
+
+
+.orbit-core {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  transform:
+    translate(-50%, -50%);
+
+  border: 1px solid rgba(255, 55, 175, 0.55);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(150, 0, 90, 0.25),
+      rgba(10, 2, 15, 0.9)
+    );
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 0 20px rgba(255, 0, 150, 0.15);
+}
+
+
+.orbit-dot {
+  position: absolute;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #ff45b4;
+
+  box-shadow:
+    0 0 10px #ff45b4;
+}
+
+
+.dot-one {
+  top: 8px;
+  left: 100px;
+}
+
+
+.dot-two {
+  right: 20px;
+  top: 105px;
+
+  background: #a66bff;
+
+  box-shadow:
+    0 0 10px #a66bff;
+}
+
+
+.dot-three {
+  bottom: 10px;
+  left: 70px;
+}
+
+
+/* =========================================================
+   CONTACT PANEL
+   ========================================================= */
+
+.contact-panel {
+  position: relative;
+
+  padding: 30px;
+
+  border: 1px solid rgba(220, 50, 160, 0.18);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(32, 5, 29, 0.72),
+      rgba(12, 4, 19, 0.86)
+    );
+
+  box-shadow:
+    inset 0 0 50px rgba(170, 0, 100, 0.025),
+    0 25px 80px rgba(0, 0, 0, 0.3);
+
+  clip-path:
+    polygon(
+      0 0,
+      calc(100% - 22px) 0,
+      100% 22px,
+      100% 100%,
+      22px 100%,
+      0 calc(100% - 22px)
+    );
+}
+
+
+.contact-panel::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  right: 10%;
+
+  width: 40%;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #a94bff,
+      #ff35ad,
+      transparent
+    );
+
+  box-shadow:
+    0 0 12px rgba(200, 40, 180, 0.6);
+}
+
+
+/* =========================================================
+   PANEL HEADER
+   ========================================================= */
+
+.panel-header {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid rgba(220, 50, 160, 0.1);
+}
+
+
+.panel-index {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #c358ad;
+
+  font-family: monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 1.7px;
+}
+
+
+.panel-header h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 25px;
+
+  font-weight: 750;
+
+  letter-spacing: -0.8px;
+}
+
+
+.panel-code {
+  color: rgba(205, 170, 205, 0.25);
+
+  font-family: monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   CONTACT CHANNEL
+   ========================================================= */
+
+.contact-channel {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 30px 50px 1fr 30px;
+
+  align-items: center;
+
+  gap: 16px;
+
+  min-height: 105px;
+
+  padding: 15px 12px;
+
+  border-bottom: 1px solid rgba(220, 50, 160, 0.1);
+
+  text-decoration: none;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+.contact-channel::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 2px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      #ff36ad,
+      #9d55ff,
+      transparent
+    );
+
+  opacity: 0;
+
+  transition: opacity 0.35s ease;
+}
+
+
+.contact-channel:hover {
+  transform: translateX(7px);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(150, 0, 90, 0.11),
+      rgba(100, 30, 150, 0.04),
+      transparent
+    );
+
+  border-color: rgba(225, 50, 165, 0.18);
+}
+
+
+.contact-channel:hover::before {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   CHANNEL NUMBER
+   ========================================================= */
+
+.channel-number {
+  color: rgba(205, 150, 200, 0.25);
+
+  font-family: monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   CHANNEL ICON
+   ========================================================= */
+
+.channel-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(224, 55, 170, 0.28);
+
+  background:
+    rgba(150, 0, 95, 0.07);
+
+  color: #ed65c3;
+
+  font-size: 17px;
+
+  box-shadow:
+    inset 0 0 15px rgba(200, 0, 120, 0.04),
+    0 0 15px rgba(220, 0, 140, 0.03);
+
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+.contact-channel:hover .channel-icon {
+  transform: rotate(-4deg);
+
+  border-color: rgba(255, 55, 180, 0.65);
+
+  box-shadow:
+    0 0 20px rgba(255, 0, 150, 0.13);
+}
+
+
+/* =========================================================
+   CHANNEL CONTENT
+   ========================================================= */
+
+.channel-content {
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+
+.channel-label {
+  margin-bottom: 5px;
+
+  color: #b34e9f;
+
+  font-family: monospace;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.7px;
+}
+
+
+.channel-content strong {
+  overflow: hidden;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 650;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+.channel-content small {
+  margin-top: 6px;
+
+  color: rgba(215, 195, 212, 0.4);
+
+  font-size: 9px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   CHANNEL ARROW
+   ========================================================= */
+
+.channel-arrow {
+  color: #e259ba;
+
+  font-size: 19px;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+
+.contact-channel:hover .channel-arrow {
+  color: #ff4cb6;
+
+  transform:
+    translate(3px, -3px);
+}
+
+
+/* =========================================================
+   LOCATION
+   ========================================================= */
+
+.location-strip {
+  display: grid;
+
+  grid-template-columns: 45px 1fr auto;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 20px;
+
+  padding: 15px;
+
+  border: 1px solid rgba(180, 80, 220, 0.12);
+
+  background:
+    rgba(110, 30, 100, 0.035);
+}
+
+
+.location-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(160, 70, 230, 0.25);
+
+  color: #ad72e8;
+
+  font-size: 16px;
+}
+
+
+.location-strip div:nth-child(2) {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+.location-strip div:nth-child(2) span {
+  color: rgba(210, 180, 205, 0.3);
+
+  font-family: monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 1.5px;
+}
+
+
+.location-strip div:nth-child(2) strong {
+  color: rgba(240, 225, 238, 0.75);
+
+  font-size: 11px;
+}
+
+
+.location-signal {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: rgba(210, 150, 205, 0.4);
+
+  font-family: monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 1px;
+}
+
+
+.location-signal span {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #c25ac4;
+
+  box-shadow:
+    0 0 8px #c25ac4;
+}
+
+
+/* =========================================================
+   MESSAGE TERMINAL
+   ========================================================= */
+
+.message-terminal {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 0.75fr 1.25fr;
+
+  gap: 60px;
+
+  padding: 42px;
+
+  margin-bottom: 65px;
+
+  border: 1px solid rgba(220, 45, 160, 0.2);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(68, 0, 45, 0.32),
+      rgba(29, 5, 43, 0.5)
+    );
+
+  box-shadow:
+    inset 0 0 50px rgba(150, 0, 100, 0.025);
+}
+
+
+.message-terminal::before {
+  content: "";
+
+  position: absolute;
+
+  top: -1px;
+  left: 8%;
+
+  width: 35%;
+
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #ff36ad,
+      #a35cff,
+      transparent
+    );
+
+  box-shadow:
+    0 0 15px rgba(255, 0, 150, 0.5);
+}
+
+
+.message-terminal::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+
+  width: 120px;
+  height: 80px;
+
+  border-right: 1px solid rgba(178, 80, 235, 0.25);
+
+  border-bottom: 1px solid rgba(255, 45, 170, 0.25);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   MESSAGE LEFT
+   ========================================================= */
+
+.message-left {
+  padding-top: 5px;
+}
+
+
+.message-index {
+  display: block;
+
+  margin-bottom: 17px;
+
+  color: #bd55a9;
+
+  font-family: monospace;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.7px;
+}
+
+
+.message-left h3 {
+  margin: 0 0 18px;
+
+  color: #ffffff;
+
+  font-size: 39px;
+
+  line-height: 0.98;
+
+  letter-spacing: -2px;
+}
+
+
+.message-left h3 span {
+  display: block;
+
+  color: #a865eb;
+}
+
+
+.message-left p {
+  max-width: 330px;
+
+  margin: 0;
+
+  color: rgba(220, 200, 218, 0.48);
+
+  font-size: 12px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.message-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+.form-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+}
+
+
+.form-field {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+.form-field label {
+  color: rgba(214, 165, 208, 0.45);
+
+  font-family: monospace;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 13px 14px;
+
+  border: 1px solid rgba(214, 55, 164, 0.16);
+
+  outline: none;
+
+  background:
+    rgba(9, 2, 14, 0.7);
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  resize: vertical;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(215, 190, 210, 0.25);
+}
+
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: rgba(245, 55, 175, 0.5);
+
+  background:
+    rgba(30, 4, 28, 0.8);
+
+  box-shadow:
+    0 0 20px rgba(220, 0, 145, 0.07),
+    inset 0 0 15px rgba(160, 0, 100, 0.025);
+}
+
+
+/* =========================================================
+   SEND BUTTON
+   ========================================================= */
+
+.send-button {
+  align-self: flex-start;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 13px 20px;
+
+  border: 1px solid rgba(255, 45, 170, 0.55);
+
+  background:
+    linear-gradient(
+      100deg,
+      rgba(116, 0, 70, 0.45),
+      rgba(98, 42, 160, 0.28)
+    );
+
+  color: #ffffff;
+
+  font-family: monospace;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.3px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 20px rgba(220, 0, 145, 0.07);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.send-button:hover {
+  transform: translateY(-3px);
+
+  background:
+    linear-gradient(
+      100deg,
+      rgba(155, 0, 90, 0.65),
+      rgba(110, 40, 190, 0.45)
+    );
+
+  box-shadow:
+    0 0 30px rgba(235, 0, 155, 0.16);
+}
+
+
+.send-arrow {
+  color: #ff58bc;
+
+  font-size: 16px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.send-button:hover .send-arrow {
+  transform:
+    translate(4px, -4px);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.contact-footer {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+}
+
+
+.footer-line {
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(225, 55, 175, 0.22)
+    );
+}
+
+
+.footer-line:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(225, 55, 175, 0.22),
+      transparent
+    );
+}
+
+
+.footer-center {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  white-space: nowrap;
+
+  color: rgba(210, 180, 210, 0.3);
+
+  font-family: monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 1.5px;
+}
+
+
+.footer-dot {
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #d04cb0;
+
+  box-shadow:
+    0 0 7px #d04cb0;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+  .contact-section {
+    padding: 110px 0 80px;
+  }
+
+
+  .header-main {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+
+  .contact-system {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+
+  .contact-identity {
+    min-height: 500px;
+  }
+
+
+  .contact-orbit {
+    right: 60px;
+  }
+
+
+  .message-terminal {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .contact-section {
+    padding: 100px 0 70px;
+  }
+
+
+  .contact-container {
+    width: 90%;
+  }
+
+
+  .contact-header {
+    margin-bottom: 50px;
+  }
+
+
+  .header-title h2 {
+    font-size: 47px;
+
+    letter-spacing: -2.5px;
+  }
+
+
+  .header-description {
+    gap: 10px;
+  }
+
+
+  .header-description p {
+    font-size: 11px;
+
+    line-height: 1.75;
+  }
+
+
+  .contact-identity {
+    min-height: 500px;
+
+    padding: 25px;
+  }
+
+
+  .contact-identity h3 {
+    margin-top: 40px;
+
+    font-size: 37px;
+  }
+
+
+  .contact-orbit {
+    width: 150px;
+    height: 150px;
+
+    right: 10px;
+    top: 125px;
+
+    opacity: 0.3;
+  }
+
+
+  .ring-one {
+    width: 65px;
+    height: 65px;
+  }
+
+
+  .ring-two {
+    width: 105px;
+    height: 105px;
+  }
+
+
+  .ring-three {
+    width: 145px;
+    height: 145px;
+  }
+
+
+  .availability-terminal {
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+  }
+
+
+  .contact-panel {
+    padding: 20px;
+  }
+
+
+  .panel-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+
+  .contact-channel {
+    grid-template-columns: 25px 42px 1fr 20px;
+
+    gap: 10px;
+
+    min-height: 95px;
+  }
+
+
+  .channel-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .channel-content strong {
+    font-size: 10px;
+  }
+
+
+  .channel-content small {
+    font-size: 8px;
+  }
+
+
+  .location-strip {
+    grid-template-columns: 42px 1fr;
+
+    gap: 10px;
+  }
+
+
+  .location-signal {
+    grid-column: 2;
+  }
+
+
+  .message-terminal {
+    padding: 25px;
+
+    gap: 30px;
+  }
+
+
+  .message-left h3 {
+    font-size: 34px;
+  }
+
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+
+  .contact-footer {
+    gap: 12px;
+  }
+
+
+  .footer-center {
+    font-size: 6px;
+
+    gap: 6px;
+
+    letter-spacing: 1px;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+  .header-title h2 {
+    font-size: 40px;
+  }
+
+
+  .contact-identity h3 {
+    font-size: 32px;
+  }
+
+
+  .contact-channel {
+    grid-template-columns: 22px 38px 1fr 15px;
+
+    padding: 12px 5px;
+  }
+
+
+  .channel-icon {
+    width: 36px;
+    height: 36px;
+
+    font-size: 14px;
+  }
+
+
+  .channel-content strong {
+    font-size: 9px;
+  }
+
+
+  .channel-content small {
+    display: none;
+  }
+
+
+  .channel-arrow {
+    font-size: 15px;
+  }
+
+
+  .message-left h3 {
+    font-size: 30px;
+  }
+
+
+  .send-button {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+}

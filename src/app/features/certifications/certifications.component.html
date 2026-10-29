@@ -1,0 +1,269 @@
+<section class="certifications-section" id="certifications">
+
+  <!-- BACKGROUND -->
+  <div class="cert-bg-glow glow-one"></div>
+  <div class="cert-bg-glow glow-two"></div>
+
+  <div class="cert-grid"></div>
+
+
+  <div class="cert-container">
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <div class="section-header">
+
+      <div class="section-number">
+        07 / CERTIFICATIONS
+      </div>
+
+      <div class="header-line"></div>
+
+      <div class="section-label">
+        VERIFIED LEARNING
+      </div>
+
+      <h2>
+        Credentials that
+        <span>back my skills.</span>
+      </h2>
+
+      <p>
+        Certifications, workshops and learning experiences
+        that reflect my continuous growth as a developer.
+      </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         CAROUSEL
+    ====================================================== -->
+
+    <div
+      class="certificate-carousel"
+      (mouseenter)="stopAutoplay()"
+      (mouseleave)="startAutoplay()">
+
+
+      <!-- ===================================================
+           LEFT INFORMATION
+      ==================================================== -->
+
+      <div class="carousel-info">
+
+        <!-- COUNTER -->
+
+        <div class="certificate-counter">
+
+          <span class="current-number">
+            {{ (currentIndex + 1).toString().padStart(2, '0') }}
+          </span>
+
+          <span class="counter-divider">
+            /
+          </span>
+
+          <span class="total-number">
+            {{ certifications.length.toString().padStart(2, '0') }}
+          </span>
+
+        </div>
+
+
+        <!-- CERTIFICATE INFORMATION -->
+
+        <div class="certificate-meta">
+
+          <span class="meta-label">
+            CERTIFICATION
+          </span>
+
+          <h3>
+            {{ certifications[currentIndex].title }}
+          </h3>
+
+
+          <div class="meta-details">
+
+            <div class="detail-item">
+
+              <span class="detail-label">
+                ISSUED BY
+              </span>
+
+              <span class="detail-value">
+                {{ certifications[currentIndex].issuer }}
+              </span>
+
+            </div>
+
+
+            <div class="detail-item">
+
+              <span class="detail-label">
+                YEAR
+              </span>
+
+              <span class="detail-value">
+                {{ certifications[currentIndex].year }}
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- VIEW BUTTON -->
+
+          <button
+            type="button"
+            class="view-certificate"
+            (click)="openCertificate(
+              certifications[currentIndex].certificateUrl
+            )">
+
+            <span>
+              VIEW CERTIFICATE
+            </span>
+
+            <span class="button-arrow">
+              ↗
+            </span>
+
+          </button>
+
+        </div>
+
+
+        <!-- =================================================
+             CAROUSEL CONTROLS
+        ================================================== -->
+
+        <div class="carousel-controls">
+
+          <button
+            type="button"
+            class="carousel-btn"
+            (click)="previousSlide()"
+            aria-label="Previous certificate">
+
+            ←
+
+          </button>
+
+
+          <div class="carousel-progress">
+
+            <span
+              *ngFor="
+                let certificate of certifications;
+                let i = index
+              "
+              class="progress-dot"
+              [class.active]="i === currentIndex"
+              (click)="goToSlide(i)">
+            </span>
+
+          </div>
+
+
+          <button
+            type="button"
+            class="carousel-btn"
+            (click)="nextSlide()"
+            aria-label="Next certificate">
+
+            →
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- ===================================================
+           CERTIFICATE IMAGE
+      ==================================================== -->
+
+      <div class="certificate-visual">
+
+        <div class="visual-number">
+          {{ certifications[currentIndex].year }}
+        </div>
+
+
+        <div class="certificate-frame">
+
+          <!-- CORNER DETAILS -->
+
+          <span class="corner corner-top-left"></span>
+          <span class="corner corner-top-right"></span>
+          <span class="corner corner-bottom-left"></span>
+          <span class="corner corner-bottom-right"></span>
+
+
+          <!-- GLOW -->
+
+          <div class="image-glow"></div>
+
+
+          <!-- IMAGE -->
+
+          <img
+            [src]="certifications[currentIndex].image"
+            [alt]="certifications[currentIndex].title"
+            class="certificate-image"
+          />
+
+        </div>
+
+
+        <!-- IMAGE CAPTION -->
+
+        <div class="visual-caption">
+
+          <span class="caption-line"></span>
+
+          <span>
+            CERTIFICATE
+            {{ (currentIndex + 1).toString().padStart(2, '0') }}
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         BOTTOM STATEMENT
+    ====================================================== -->
+
+    <div class="cert-footer">
+
+      <span class="footer-line"></span>
+
+      <span>LEARN</span>
+
+      <span class="footer-arrow">
+        →
+      </span>
+
+      <span>BUILD</span>
+
+      <span class="footer-arrow">
+        →
+      </span>
+
+      <span>GROW</span>
+
+    </div>
+
+  </div>
+
+</section>

@@ -1,0 +1,327 @@
+<nav class="navbar" [class.scrolled]="isScrolled">
+
+  <div class="nav-container">
+
+    <!-- =====================================================
+         BRAND
+    ====================================================== -->
+
+    <div class="nav-brand">
+
+      <!-- SP LOGO -->
+      <a
+        href="#home"
+        class="logo"
+        (click)="scrollToSection($event, 'home')">
+
+        <div class="logo-mark">
+          <span class="logo-sp">SP</span>
+        </div>
+
+      </a>
+
+
+      <!-- WEBSITE NAME -->
+      <a
+        href="#home"
+        class="site-name"
+        (click)="scrollToSection($event, 'home')">
+
+        soumyashree.dev
+
+      </a>
+
+    </div>
+
+
+    <!-- =====================================================
+         DESKTOP NAVIGATION
+    ====================================================== -->
+
+    <div class="nav-links">
+
+      <!-- 01 HOME -->
+      <a
+        href="#home"
+        class="nav-link active"
+        (click)="scrollToSection($event, 'home')">
+
+        <span class="link-number">01</span>
+        <span class="link-text">Home</span>
+
+      </a>
+
+
+      <!-- 02 ABOUT -->
+      <a
+        href="#about"
+        class="nav-link"
+        (click)="scrollToSection($event, 'about')">
+
+        <span class="link-number">02</span>
+        <span class="link-text">About</span>
+
+      </a>
+
+
+      <!-- 03 SKILLS -->
+      <a
+        href="#skills"
+        class="nav-link"
+        (click)="scrollToSection($event, 'skills')">
+
+        <span class="link-number">03</span>
+        <span class="link-text">Skills</span>
+
+      </a>
+
+
+      <!-- 04 EDUCATION -->
+      <a
+        href="#education"
+        class="nav-link"
+        (click)="scrollToSection($event, 'education')">
+
+        <span class="link-number">04</span>
+        <span class="link-text">Education</span>
+
+      </a>
+
+
+      <!-- 05 PROJECTS -->
+      <a
+        href="#projects"
+        class="nav-link"
+        (click)="scrollToSection($event, 'projects')">
+
+        <span class="link-number">05</span>
+        <span class="link-text">Projects</span>
+
+      </a>
+
+
+      <!-- 06 EXPERIENCE -->
+      <a
+        href="#experience"
+        class="nav-link"
+        (click)="scrollToSection($event, 'experience')">
+
+        <span class="link-number">06</span>
+        <span class="link-text">Experience</span>
+
+      </a>
+
+
+      <!-- 07 CERTIFICATIONS -->
+      <a
+        href="#certifications"
+        class="nav-link"
+        (click)="scrollToSection($event, 'certifications')">
+
+        <span class="link-number">07</span>
+        <span class="link-text">Certifications</span>
+
+      </a>
+
+
+      <!-- 08 CONTACT -->
+      <a
+        href="#contact"
+        class="nav-link contact-link"
+        (click)="scrollToSection($event, 'contact')">
+
+        <span class="link-number">08</span>
+        <span class="link-text">Contact</span>
+
+      </a>
+
+    </div>
+
+
+    <!-- =====================================================
+         RIGHT SIDE ACTIONS
+    ====================================================== -->
+
+    <div class="nav-actions">
+
+      <!-- LET'S TALK -->
+      <a
+        href="#contact"
+        class="contact-btn"
+        (click)="scrollToSection($event, 'contact')">
+
+        <span>Let's Talk</span>
+        <span class="contact-arrow">↗</span>
+
+      </a>
+
+
+      <!-- RESUME -->
+      <a
+        href="assets/documents/resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="resume-btn">
+
+        <span>Resume</span>
+        <span class="resume-arrow">↗</span>
+
+      </a>
+
+    </div>
+
+
+    <!-- =====================================================
+         MOBILE MENU BUTTON
+    ====================================================== -->
+
+    <button
+      class="menu-toggle"
+      type="button"
+      (click)="toggleMenu()"
+      [class.open]="menuOpen"
+      aria-label="Toggle navigation">
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+  </div>
+
+
+  <!-- =======================================================
+       MOBILE MENU
+  ======================================================== -->
+
+  <div
+    class="mobile-menu"
+    [class.open]="menuOpen">
+
+    <div class="mobile-menu-inner">
+
+
+      <!-- 01 HOME -->
+      <a
+        href="#home"
+        (click)="scrollToSection($event, 'home')">
+
+        <span class="mobile-number">01</span>
+        <span>Home</span>
+
+      </a>
+
+
+      <!-- 02 ABOUT -->
+      <a
+        href="#about"
+        (click)="scrollToSection($event, 'about')">
+
+        <span class="mobile-number">02</span>
+        <span>About</span>
+
+      </a>
+
+
+      <!-- 03 SKILLS -->
+      <a
+        href="#skills"
+        (click)="scrollToSection($event, 'skills')">
+
+        <span class="mobile-number">03</span>
+        <span>Skills</span>
+
+      </a>
+
+
+      <!-- 04 EDUCATION -->
+      <a
+        href="#education"
+        (click)="scrollToSection($event, 'education')">
+
+        <span class="mobile-number">04</span>
+        <span>Education</span>
+
+      </a>
+
+
+      <!-- 05 PROJECTS -->
+      <a
+        href="#projects"
+        (click)="scrollToSection($event, 'projects')">
+
+        <span class="mobile-number">05</span>
+        <span>Projects</span>
+
+      </a>
+
+
+      <!-- 06 EXPERIENCE -->
+      <a
+        href="#experience"
+        (click)="scrollToSection($event, 'experience')">
+
+        <span class="mobile-number">06</span>
+        <span>Experience</span>
+
+      </a>
+
+
+      <!-- 07 CERTIFICATIONS -->
+      <a
+        href="#certifications"
+        (click)="scrollToSection($event, 'certifications')">
+
+        <span class="mobile-number">07</span>
+        <span>Certifications</span>
+
+      </a>
+
+
+      <!-- 08 CONTACT -->
+      <a
+        href="#contact"
+        (click)="scrollToSection($event, 'contact')">
+
+        <span class="mobile-number">08</span>
+        <span>Contact</span>
+
+      </a>
+
+
+      <!-- MOBILE WEBSITE NAME -->
+      <div class="mobile-site-name">
+        soumyashree.dev
+      </div>
+
+
+      <!-- MOBILE LET'S TALK -->
+      <a
+        href="#contact"
+        class="mobile-contact"
+        (click)="scrollToSection($event, 'contact')">
+
+        <span>Let's Talk</span>
+        <span>↗</span>
+
+      </a>
+
+
+      <!-- MOBILE RESUME -->
+      <a
+        href="assets/documents/resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mobile-resume">
+
+        <span>Download Resume</span>
+        <span>↗</span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</nav>
